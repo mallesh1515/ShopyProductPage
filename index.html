@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Page - Coding Assessment</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="container">
+        
+        <section class="product-wrapper">
+            <!-- LEFT: Gallery -->
+            <div>
+                <div class="gallery">
+                    <div class="main-image-wrap">
+                        <img id="mainImage" src="./assets/m1.jpeg" alt="Main product image" tabindex="0"
+                            style="width: 500px;height:500px;">
+                    </div>
+                </div>
+                <div class="thumbnails" id="thumbnailRow" aria-label="Product thumbnails">
+                    <img class="thumb active" src="./assets/m1.jpeg" alt="Thumb 1" data-full="./assets/m1.jpeg">
+                    <img class="thumb" src="./assets/m2.jpeg" alt="Thumb 2" data-full="./assets/m2.jpeg">
+                    <img class="thumb" src="./assets/m3.jpeg" alt="Thumb 3" data-full="./assets/m3.jpeg">
+                    <img class="thumb" src="./assets/m4.jpeg" alt="Thumb 4" data-full="./assets/m4.jpeg">
+                    <img class="thumb" src="./assets/m5.jpeg" alt="Thumb 5" data-full="./assets/m5.jpeg">
+                    <img class="thumb" src="./assets/m2.jpeg" alt="Thumb 2" data-full="./assets/m2.jpeg">
+                    <img class="thumb" src="./assets/m3.jpeg" alt="Thumb 3" data-full="./assets/m3.jpeg">
+                    <img class="thumb" src="./assets/m4.jpeg" alt="Thumb 4" data-full="./assets/m4.jpeg">
+                    <img class="thumb" src="./assets/m5.jpeg" alt="Thumb 5" data-full="./assets/m5.jpeg">
+                    <img class="thumb" src="./assets/m2.jpeg" alt="Thumb 2" data-full="./assets/m2.jpeg">
+                    <img class="thumb" src="./assets/m3.jpeg" alt="Thumb 3" data-full="./assets/m3.jpeg">
+                    <img class="thumb" src="./assets/m4.jpeg" alt="Thumb 4" data-full="./assets/m4.jpeg">
+                    <img class="thumb" src="./assets/m5.jpeg" alt="Thumb 5" data-full="./assets/m5.jpeg">
+                </div>
+            </div>
+
+            <!-- RIGHT: Product details -->
+            <aside class="details">
+                <h1 class="product-title">Sample Product Name</h1>
+                <p class="product-price" id="productPrice">$79.00</p>
+                <p class="product-sku">SKU: P-12345</p>
+
+                <!-- Variants: Colors -->
+                <div class="variant-section">
+                    <label>Colour</label>
+                    <div class="color-swatches" id="colorSwatches" role="list">
+                        <button class="swatch" style="background:#c0392b" data-color="Crimson"
+                            data-image="./assets/download.jpeg" aria-label="Crimson"></button>
+                        <button class="swatch" style="background:#2c3e50" data-color="Midnight"
+                            data-image="./assets/download.jpeg" aria-label="Midnight"></button>
+                        <button class="swatch" style="background:#2ecc71" data-color="Mint"
+                            data-image="./assets/download.jpeg" aria-label="Mint"></button>
+                        <button class="swatch" style="background:#f39c12" data-color="Sun"
+                            data-image="./assets/download.jpeg" aria-label="Sun"></button>
+                    </div>
+                    <button id="compareColorsBtn" class="small-btn">Compare Colours</button>
+                </div>
+
+                <!-- Variants: Size -->
+                <div class="variant-section">
+                    <label for="sizeSelect">Size</label>
+                    <select id="sizeSelect" aria-label="Select size">
+                        <option value="S">S</option>
+                        <option value="M" selected>M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <button id="sizeChartBtn" class="small-btn">Size Chart</button>
+                </div>
+
+                <p class="selected-variant" id="selectedVariantLabel">
+                    Selected: <span id="selVariant">Midnight - M</span>
+                </p>
+
+                <div class="actions">
+                    <button id="addToCartBtn" class="primary">Add to cart</button>
+                    <button id="buyNowBtn" class="secondary">Buy now</button>
+                </div>
+
+                <!-- Bundle suggestion -->
+                <div class="bundle">
+                    <h3>Buy these together</h3>
+                    <div class="bundle-items">
+                        <div class="bundle-item">
+                            <img src="./assets/download.jpeg" alt="Item A">
+                            <div class="meta">
+                                <div>Item A</div>
+                                <div class="muted">$30.00</div>
+                            </div>
+                        </div>
+                        <div class="bundle-item">
+                            <img src="./assets/download.jpeg" alt="Item B">
+                            <div class="meta">
+                                <div>Item B</div>
+                                <div class="muted">$25.00</div>
+                            </div>
+                        </div>
+                        <div class="bundle-item">
+                            <img src="./assets/download.jpeg" alt="Item C">
+                            <div class="meta">
+                                <div>Item C</div>
+                                <div class="muted">$20.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bundle-total">
+                        <span>Total:</span>
+                        <strong id="bundleTotal">$75.00</strong>
+                        <button id="addBundleBtn" class="primary small">Add bundle to cart</button>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Tabs -->
+        <section class="info-tabs">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="desc">Description</button>
+                <button class="tab-btn" data-tab="info">Product Information</button>
+                <button class="tab-btn" data-tab="ship">Shipping Details</button>
+            </div>
+            <div class="tab-contents">
+                <div id="desc" class="tab-content">
+                    <h3>About this product</h3>
+                    <p>This is a sample product description. Use rich descriptive copy here to show features and
+                        benefits.</p>
+                </div>
+                <div id="info" class="tab-content hidden">
+                    <h3>Product information</h3>
+                    <ul>
+                        <li>Material: 100% Cotton</li>
+                        <li>Care: Machine wash cold</li>
+                        <li>Origin: Made in India</li>
+                    </ul>
+                </div>
+                <div id="ship" class="tab-content hidden">
+                    <h3>Shipping & returns</h3>
+                    <p>Ships in 1–2 business days. 30-day returns accepted (conditions apply).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pair well with -->
+        <section class="pair-well">
+            <h3>Pair Well With</h3>
+            <div class="pair-row" id="pairRow">
+                <article class="card">
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Cozy Socks</h4>
+                    <p class="muted">$9.99</p>
+                    <button class="card-add">Add</button>
+                </article>
+                <article class="card">
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Leather Belt</h4>
+                    <p class="muted">$19.99</p>
+                    <button class="card-add">Add</button>
+                </article>
+                <article class="card">
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Beanie</h4>
+                    <p class="muted">$12.99</p>
+                    <button class="card-add">Add</button>
+                </article>
+                <article class="card">
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Sunglasses</h4>
+                    <p class="muted">$39.99</p>
+                    <button class="card-add">Add</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Related products -->
+        <section class="related">
+            <h3>Related Products</h3>
+            <div class="related-grid">
+                <div class="related-card">
+                    <span class="badge new">New</span>
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Related 1</h4>
+                    <p class="muted">$49.00</p>
+                </div>
+                <div class="related-card">
+                    <span class="badge popular">Popular</span>
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Related 2</h4>
+                    <p class="muted">$59.00</p>
+                </div>
+                <div class="related-card">
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Related 3</h4>
+                    <p class="muted">$39.00</p>
+                </div>
+                <div class="related-card">
+                    <img src="./assets/download.jpeg" alt="">
+                    <h4>Related 4</h4>
+                    <p class="muted">$29.00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Size Chart Modal -->
+    <div id="sizeChartModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="sizeTitle">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2 id="sizeTitle">Size Chart</h2>
+            <table class="size-table">
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest (in)</th>
+                        <th>Length (in)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>36"</td>
+                        <td>26"</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>38"</td>
+                        <td>27"</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>40"</td>
+                        <td>28"</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>42"</td>
+                        <td>29"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Compare Colours Modal -->
+    <div id="compareModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2 id="compareTitle">Compare Colours</h2>
+            <p>Select up to 4 colours to compare:</p>
+            <div id="compareSwatches" class="compare-swatches"></div>
+            <div id="comparePreview" class="compare-preview"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
