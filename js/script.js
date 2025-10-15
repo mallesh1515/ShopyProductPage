@@ -177,7 +177,7 @@ qsa('.tab-btn').forEach(btn => {
 });
 
 /* ---------- Bundle total calculation ---------- */
-const bundlePrices = [30.00, 25.00, 20.00]; // must align with visuals
+const bundlePrices = [59.00, 15.00, 25.00]; // must align with visuals
 const bundleTotalEl = qs('#bundleTotal');
 function updateBundleTotal() {
     const sum = bundlePrices.reduce((a, b) => a + b, 0);
