@@ -24,6 +24,13 @@ This is a vanilla HTML/CSS/JS implementation of a product page that mimics featu
 2. Open `index.html` in your browser (double-click or `File > Open`).
 3. Replace placeholder images with your assets in `assets/images/` if desired.
 
+## Screenshots
+Here are some outputs of the product page:
+1. screenshots/Screenshot-1.png
+2. screenshots/Screenshot-2.png
+3. screenshots/Screenshot-3.png
+4. screenshots/Screenshot-4.png
+
 ## Notes
 - No external libraries used. All code is modular and commented.
 - Replace placeholder images if you require offline assets.
