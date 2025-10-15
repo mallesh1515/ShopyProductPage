@@ -26,10 +26,10 @@ This is a vanilla HTML/CSS/JS implementation of a product page that mimics featu
 
 ## Screenshots
 Here are some outputs of the product page:
-1. screenshots/Screenshot-1.png
-2. screenshots/Screenshot-2.png
-3. screenshots/Screenshot-3.png
-4. screenshots/Screenshot-4.png
+1. Screenshots/Screenshot-1.png
+2. Screenshots/Screenshot-2.png
+3. Screenshots/Screenshot-3.png
+4. Screenshots/Screenshot-4.png
 
 ## Notes
 - No external libraries used. All code is modular and commented.
